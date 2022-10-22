@@ -42,8 +42,8 @@ const initializeMicroFrontend = () => {
 
   const onResize = () =>
     appEmit("hook:resize", {
-      height: document.documentElement.scrollHeight,
-      width: document.documentElement.scrollWidth,
+      height: document.body.scrollHeight,
+      width: document.body.scrollWidth,
     });
   onResize();
   const observer = new ResizeObserver(onResize);
